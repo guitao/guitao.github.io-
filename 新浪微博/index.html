@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>微博-随时随地发现新鲜事</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/JQuery-3.3.1.js"></script>
+    
+</head>
+<div class="screen">
+    <div class="wb-main">
+        <div class="wb-main-con">
+            <div class="top-nav">
+                <div class="top-nav-con">
+                    <div class="wb-logo">
+                        <a href="#" class="logo-box">
+                            <span class="logo"></span>
+                        </a>
+                    </div>
+                    <div class="search">
+                        <span class="placeholder">大家都在搜：高考结束后大家最想做的事情</span>
+                        <input type="text" class="search-input">
+                        <a href="#" class="pic-fdj"></a>
+                        <!-- 热搜词下拉 -->
+                        <div class="search-list-wrap">
+                            <div class="search-list">
+                                <ul>
+                                    <li class="reSou">
+                                        <a href="#" class="reSou-con">查看完整热搜榜>></a>
+                                    </li>
+
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="red">1</i> 马思纯叫周冬雨宝贝
+
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="orange">2</i> 易烊千玺出关
+
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i>3</i> 阿娇澄清
+
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i>4</i> 高考结束 抱着被子进网吧
+
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i>5</i> 外国人 酸辣粉是塑料的吗
+
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i>6</i> 蒋劲夫ins
+
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i>7</i> 吴磊毕业典礼
+
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i>8</i> 跑车载4女子 坐姿惊人
+
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i>9</i> 学校免费送三万斤桃子
+
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="longer">10</i> 王传君 爱情公寓
+
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="left-tab">
+                        <div class="tab-nav">
+                            <ul class="nav-list">
+                                <li>
+                                    <a href="#">
+                                        <span class="house nav-logo"></span>
+                                        <em>首页</em>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="vedio nav-logo"></span>
+                                        <em>视频</em>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="find nav-logo"></span>
+                                        <em>发现</em>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="game nav-logo"></span>
+                                        <em>游戏</em>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-login">
+                            <ul class="lgoin-list">
+                                <li>
+                                    <a href="#">注册</a>
+                                </li>
+                                <li>|</li>
+                                <li>
+                                    <a href="#" id="logo-in">登录</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wb-main-bd">
+                <div class="main-bd-wrap">
+                    <div class="left-nav-wrap">
+                        <div class="left-nav">
+                            <ul>
+                                <li>
+                                    <a href="#" class="select">热门</a>
+                                </li>
+                                <li>
+                                    <a href="#">头条</a>
+                                </li>
+                                <li>
+                                    <a href="#">视频</a>
+                                </li>
+                                <li>
+                                    <a href="#">新鲜事</a>
+                                </li>
+                                <li>
+                                    <a href="#">榜单</a>
+                                </li>
+                                <li>
+                                    <a href="#">搞笑</a>
+                                </li>
+                                <li>
+                                    <a href="#">社会</a>
+                                </li>
+                                <li>
+                                    <a href="#">时尚</a>
+                                </li>
+                                <li>
+                                    <a href="#">电影</a>
+                                </li>
+                                <li>
+                                    <a href="#">美女</a>
+                                </li>
+                                <li>
+                                    <a href="#">体育</a>
+                                </li>
+                                <li>
+                                    <a href="#">动漫</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="right-main">
+                        <div class="main-right-box">
+                            <div class="item-middle-box">
+                                <div class="pic-wrap">
+                                    <ul class="pic-scroll" style="transform: translateX(-660px);
+                                    transition-duration: 0.3s;
+                                    backface-visibility: hidden;">
+                                        <li>
+                                            <a href="#"><img src="image/pic5.jpg" alt="#" style="width: 660px;height: 300px;"></a>
+                                            <div class="pic-info">提醒你恭喜中奖</div>
+
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="image/pic1.jpg" alt="#" style="width: 660px;height: 300px;">
+                                                <div class="pic-info">绝地求生搞笑视频精选</div>
+                                            </a>
+
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="image/pic2.jpg" alt="#" style="width: 660px;height: 300px;">
+                                                <div class="pic-info">这样吃很科学</div>
+                                            </a>
+
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="image/pic3.jpg" alt="#" style="width: 660px;height: 300px;">
+                                                <div class="pic-info">今日份的沙滩，请接收</div>
+                                            </a>
+
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="image/pic4.jpg" alt="#" style="width: 660px;height: 300px;">
+                                                <div class="pic-info">有什么值得好买的</div>
+                                            </a>
+
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="image/pic5.jpg" alt="#" style="width: 660px;height: 300px;">
+                                                <div class="pic-info">提醒你恭喜中奖</div>
+                                            </a>
+
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="image/pic1.jpg" alt="#" style="width: 660px;height: 300px;">
+                                                <div class="pic-info">绝地求生搞笑视频精选</div>
+                                            </a>
+
+                                        </li>
+                                    </ul>
+                                    <ul class="dots-box">
+                                        <li class="select dots"></li>
+                                        <li class="dots"></li>
+                                        <li class="dots"></li>
+                                        <li class="dots"></li>
+                                        <li class="dots"></li>
+                                    </ul>
+                                </div>
+                                <div class="info-tip" id="info-tip">
+                                    你有未读内容，点击查看
+                                    <em id="info-tip-close">x</em>
+                                </div>
+                                <div class="content-wrap">
+                                    <ul>
+                                        <div class="news-1">
+                                            <div class="img-wrap">
+                                                <img src="image/news1.jpg" alt="news1" style="width: 158px;height: 102px;">
+                                            </div>
+                                            <div class="pic-des">
+                                                <h3>安娜：范伟老师，不好了，我家铲屎官……看到你的材料了。 ​​​​</h3>
+                                                <div class="subinfo">
+                                                    <a href="javascript:;">
+                                                        <span class="touxiang"></span>
+                                                        <span class="name">崔永元</span>
+                                                    </a>
+                                                    <span class="time">6月11日 18:47</span>
+                                                    <span class="zan right">
+                                                        <span class="news-zan">赞</span>
+                                                    <span id="N1-zan-num">276351</span>
+                                                    </span>
+                                                    <span class="line right">|</span>
+                                                    <span class="pl right">
+                                                        评论
+                                                        <span>10786</span>
+                                                    </span>
+                                                    <span class="line right">|</span>
+                                                    <span class="fx right">
+                                                        分享
+                                                        <span>15924</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="news-2">
+                                            <h3>今天是我们结婚30周年的纪念日,无论在何时何地的另一个30年甚至60年仍然你我同在同行🙏因为有你有女儿,新的时代一切变得越来越好直到永远！衷心地祝福大家：有情人终成眷属🙏🙏🙏 ​​​​</h3>
+                                            <div class="pic-list">
+                                                <a href="#"><img src="image/news2-1.jpg" alt="" style="width: 158px;height: 102px;"></a>
+                                                <a href="#"><img src="image/news2-2.jpg" alt="" style="width: 158px;height: 102px;"></a>
+                                                <a href="#"><img src="image/news2-3.jpg" alt="" style="width: 158px;height: 102px;"></a>
+                                                <a href="#"><img src="image/news2-4.jpg" alt="" style="width: 158px;height: 102px;"></a>
+                                            </div>
+                                            <div class="subinfo">
+                                                <a href="javascript:;">
+                                                    <span class="touxiang"></span>
+                                                    <span class="name">六小龄童</span>
+                                                </a>
+                                                <span class="time">6月11日 18:47</span>
+                                                <span class="zan right">
+                                                    <span class="news-zan">赞</span>
+                                                <span id="N2-zan-num">276351</span>
+                                                </span>
+                                                <span class="line right">|</span>
+                                                <span class="pl right">
+                                                        评论
+                                                        <span>10786</span>
+                                                </span>
+                                                <span class="line right">|</span>
+                                                <span class="fx right">
+                                                        分享
+                                                        <span>15924</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="news-3">
+                                            <div class="pic-wrap">
+                                                <img src="image/news3.jpg" alt="" style="width: 158px;height: 180px;">
+                                            </div>
+                                            <div class="pic-des">
+                                                <h3>没有晚饭<br>我们只能自己去买菜</h3>
+                                                <div class="subinfo">
+                                                    <a href="javascript:;">
+                                                        <span class="touxiang"></span>
+                                                        <span class="name">陈赫</span>
+                                                    </a>
+                                                    <span class="time">6月11日 18:47</span>
+                                                    <span class="zan right">
+                                                        <span class="news-zan">赞</span>
+                                                    <span id="N3-zan-num">276351</span>
+                                                    </span>
+                                                    <span class="line right">|</span>
+                                                    <span class="pl right">
+                                                                评论
+                                                                <span>10786</span>
+                                                    </span>
+                                                    <span class="line right">|</span>
+                                                    <span class="fx right">
+                                                                分享
+                                                                <span>15924</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="news-4">
+                                            <div class="pic-wrap">
+                                                <img src="image/news4.jpg" alt="" style="width: 158px;height: 180px;">
+                                            </div>
+                                            <div class="pic-des">
+                                                <h3>相逢一笑抿一口，哈哈哈哈！</h3>
+                                                <div class="subinfo">
+                                                    <a href="javascript:;">
+                                                        <span class="touxiang"></span>
+                                                        <span class="name">华晨宇yu</span>
+                                                    </a>
+                                                    <span class="time">6月11日 18:47</span>
+                                                    <span class="zan right">
+                                                        <span class="news-zan">赞</span>
+                                                    <span id="N4-zan-num">276351</span>
+                                                    </span>
+                                                    <span class="line right">|</span>
+                                                    <span class="pl right">
+                                                                        评论
+                                                                        <span>10786</span>
+                                                    </span>
+                                                    <span class="line right">|</span>
+                                                    <span class="fx right">
+                                                                        分享
+                                                                        <span>15924</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="news-5">
+                                            <h3>今天是我们结婚30周年的纪念日,无论在何时何地的另一个30年甚至60年仍然你我同在同行🙏因为有你有女儿,新的时代一切变得越来越好直到永远！衷心地祝福大家：有情人终成眷属🙏🙏🙏 ​​​​</h3>
+                                            <div class="pic-list">
+                                                <a href="#"><img src="image/news5-1.jpg" alt="" style="width: 158px;height: 102px;"></a>
+                                                <a href="#"><img src="image/news5-2.jpg" alt="" style="width: 158px;height: 102px;"></a>
+                                                <a href="#"><img src="image/news5-3.jpg" alt="" style="width: 158px;height: 102px;"></a>
+                                                <a href="#"><img src="image/news5-4.jpg" alt="" style="width: 158px;height: 102px;"></a>
+                                            </div>
+                                            <div class="subinfo">
+                                                <a href="javascript:;">
+                                                    <span class="touxiang"></span>
+                                                    <span class="name">桂涛</span>
+                                                </a>
+                                                <span class="time">6月11日 18:47</span>
+                                                <span class="zan right">
+                                                    <span class="news-zan">赞</span>
+                                                <span id="N5-zan-num">276351</span>
+                                                </span>
+                                                <span class="line right">|</span>
+                                                <span class="pl right">
+                                                            评论
+                                                            <span>10786</span>
+                                                </span>
+                                                <span class="line right">|</span>
+                                                <span class="fx right">
+                                                            分享
+                                                            <span>15924</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="item-right-box">
+                                <div class="logoin-part">
+                                    <div class="logoin-part-box">
+                                        <div class="zh-logoin">
+                                            <div class="zh-logoin-box">
+                                                <div class="zh-logoin-innerWrap">
+                                                    <div class="info-header">
+                                                        <div class="change-tab">
+                                                            <a href="javascript:;" class="select" id="zH-login">账号登陆</a>
+                                                            <a href="javascript:;" id="qrcode-login">安全登录</a>
+                                                        </div>
+                                                        <!-- 点击相互切换 -->
+                                                        <a href="javascript:;" class="dx-qrcode" id="box-change">切换</a>
+                                                    </div>
+                                                    <!-- 账号登录框 -->
+                                                    <div class="login-form" id="login-form">
+                                                        <div class="info-list username">
+                                                            <div class="input-wrap" id="input-wrap-1">
+                                                                <span class="people-logo"></span>
+                                                                <input id="user-in" type="text" value="邮箱/会员帐号/手机号">
+                                                            </div>
+                                                        </div>
+                                                        <div class="info-list password">
+                                                            <div class="input-wrap" id="input-wrap-2">
+                                                                <span class="suo-logo"></span>
+                                                                <input id="pwd-input" type="password">
+                                                                <span id="pwd-tips">请输入密码</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="info-list auto-login">
+                                                            <label for="login-form-savestate" title="建议在网吧或公共电脑上取消该选项。">
+                                                                        <input type="checkbox" id="login-form-savestate">
+                                                                        <span>记住我</span>
+                                                                    </label>
+                                                            <span class="forget-pwd">
+                                                                <a href="javascript:;">忘记密码</a>
+                                                            </span>
+
+                                                        </div>
+                                                        <div class="info-list login-btn">
+                                                            <a href="javascript:;" id="login-form-btn">登录</a>
+                                                        </div>
+                                                        <div class="info-list register">
+                                                            <span>还没有微博？</span>
+                                                            <a href="#">立即注册！</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="safe-logoin" id="safe-login">
+                                                        <img src="image/ewm.png" alt="">
+                                                        <p>请打开微博客户端“扫一扫”</p>
+                                                        <div class="tip-info">
+                                                            <span>还没有微博？</span>
+                                                            <a href="#">立即注册！</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dx-logoin" id="dx-login">
+                                                        <div class="info-list phone">
+                                                            <div class="input-wrap" id="input-wrap-3">
+                                                                <span class="phone-logo"></span>
+                                                                <input type="text" placeholder="手机号码，仅支持大陆手机" id="phone-number">
+                                                            </div>
+                                                        </div>
+                                                        <div class="info-list msg-info">
+                                                            <a href="javascript:;">获取短信验证码</a>
+                                                            <div class="dx-input-box">
+                                                                <input type="text" value="短信验证码">
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="info-list auto-login">
+                                                            <label for="login-form-savestate" title="建议在网吧或公共电脑上取消该选项。">
+                                                                            <input type="checkbox" id="login-form-savestate">
+                                                                            <span>记住我</span>
+                                                                        </label>
+                                                            <span class="forget-pwd">
+                                                                    <a href="javascript:;">忘记密码</a>
+                                                                </span>
+
+                                                        </div>
+                                                        <div class="info-list login-btn">
+                                                            <a href="javascript:;" id="dxlogin-btn">登录</a>
+                                                        </div>
+                                                        <div class="info-list register">
+                                                            <span>还没有微博？</span>
+                                                            <a href="#">立即注册！</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="info-list other-login"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="right-newsinfo-wrap">
+                                    <div class="FN-box">
+                                        <h2 class="FN-title">微博新鲜事</h2>
+                                        <div class="body-box">
+                                            <div class="con-list-a">
+                                                <div class="inner-content">
+                                                    <div class="pic-box">
+                                                        <a href="#"><img src="image/right-funny-1.jpg" alt="" width="120px" height="70px"></a>
+                                                    </div>
+                                                    <div class="list-des">
+                                                        <h3 class="list-title"><a href="#">今日看盘</a></h3>
+                                                        <div class="time">
+                                                            <span class="time-con">27分钟前</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="con-list-a">
+                                                <div class="inner-content">
+                                                    <div class="pic-box">
+                                                        <a href="#"><img src="image/right-funny-1.jpg" alt="" width="120px" height="70px"></a>
+                                                    </div>
+                                                    <div class="list-des">
+                                                        <h3 class="list-title"><a href="#">今日看盘</a></h3>
+                                                        <div class="time">
+                                                            <span class="time-con">27分钟前</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="con-list-a">
+                                                <div class="inner-content">
+                                                    <div class="pic-box">
+                                                        <a href="#"><img src="image/right-funny-1.jpg" alt="" width="120px" height="70px"></a>
+                                                    </div>
+                                                    <div class="list-des">
+                                                        <h3 class="list-title"><a href="#">今日看盘</a></h3>
+                                                        <div class="time">
+                                                            <span class="time-con">27分钟前</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="con-list-a">
+                                                <div class="inner-content">
+                                                    <div class="pic-box">
+                                                        <a href="#"><img src="image/right-funny-1.jpg" alt="" width="120px" height="70px"></a>
+                                                    </div>
+                                                    <div class="list-des">
+                                                        <h3 class="list-title"><a href="#">今日看盘</a></h3>
+                                                        <div class="time">
+                                                            <span class="time-con">27分钟前</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="con-list-a">
+                                                <div class="inner-content">
+                                                    <div class="pic-box">
+                                                        <a href="#"><img src="image/right-funny-1.jpg" alt="" width="120px" height="70px"></a>
+                                                    </div>
+                                                    <div class="list-des">
+                                                        <h3 class="list-title"><a href="#">今日看盘</a></h3>
+                                                        <div class="time">
+                                                            <span class="time-con">27分钟前</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="foot-box">
+                                            <a href="#" class="look-more">查看更多</a>
+                                            <span>></span>
+
+                                        </div>
+                                    </div>
+                                    <div class="FN-box">
+                                        <h2 class="FN-title">微博实时热点</h2>
+                                        <div class="body-box">
+                                            <div class="con-list-b">
+                                                <div class="pic-box">
+                                                    <a href="#"><img src="image/list-b.jpg" alt="" width="50px" height="50px"></a>
+                                                </div>
+                                                <div class="list-des">
+                                                    <h3>
+                                                        <a href="#">奚梦瑶遭vogue主编吐槽</a>
+                                                    </h3>
+                                                    <div class="des-txt">
+                                                        奚梦瑶遭vogue主编吐槽 纵观参与活动的所有嘉宾，小明同学的宣传配合可以说是相当卖力了，AC和小明已经相识合作多年了，关系好才会直爽的留言，不知道有心人在挑拨些什么？ ​​​​
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="con-list-b">
+                                                <div class="pic-box">
+                                                    <a href="#"><img src="image/list-b.jpg" alt="" width="50px" height="50px"></a>
+                                                </div>
+                                                <div class="list-des">
+                                                    <h3>
+                                                        <a href="#">奚梦瑶遭vogue主编吐槽</a>
+                                                    </h3>
+                                                    <div class="des-txt">
+                                                        奚梦瑶遭vogue主编吐槽 纵观参与活动的所有嘉宾，小明同学的宣传配合可以说是相当卖力了，AC和小明已经相识合作多年了，关系好才会直爽的留言，不知道有心人在挑拨些什么？ ​​​​
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="con-list-b">
+                                                <div class="pic-box">
+                                                    <a href="#"><img src="image/list-b.jpg" alt="" width="50px" height="50px"></a>
+                                                </div>
+                                                <div class="list-des">
+                                                    <h3>
+                                                        <a href="#">奚梦瑶遭vogue主编吐槽</a>
+                                                    </h3>
+                                                    <div class="des-txt">
+                                                        奚梦瑶遭vogue主编吐槽 纵观参与活动的所有嘉宾，小明同学的宣传配合可以说是相当卖力了，AC和小明已经相识合作多年了，关系好才会直爽的留言，不知道有心人在挑拨些什么？ ​​​​
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="con-list-b">
+                                                <div class="pic-box">
+                                                    <a href="#"><img src="image/list-b.jpg" alt="" width="50px" height="50px"></a>
+                                                </div>
+                                                <div class="list-des">
+                                                    <h3>
+                                                        <a href="#">奚梦瑶遭vogue主编吐槽</a>
+                                                    </h3>
+                                                    <div class="des-txt">
+                                                        奚梦瑶遭vogue主编吐槽 纵观参与活动的所有嘉宾，小明同学的宣传配合可以说是相当卖力了，AC和小明已经相识合作多年了，关系好才会直爽的留言，不知道有心人在挑拨些什么？ ​​​​
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="con-list-b">
+                                                <div class="pic-box">
+                                                    <a href="#"><img src="image/list-b.jpg" alt="" width="50px" height="50px"></a>
+                                                </div>
+                                                <div class="list-des">
+                                                    <h3>
+                                                        <a href="#">奚梦瑶遭vogue主编吐槽</a>
+                                                    </h3>
+                                                    <div class="des-txt">
+                                                        奚梦瑶遭vogue主编吐槽 纵观参与活动的所有嘉宾，小明同学的宣传配合可以说是相当卖力了，AC和小明已经相识合作多年了，关系好才会直爽的留言，不知道有心人在挑拨些什么？ ​​​​
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="foot-box">
+                                            <a href="#" class="look-more">查看更多</a>
+                                            <span>></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<div id="shadow" style="position: fixed; top: 0px; left: 0px; width: 1263px; height: 1000px; background: rgb(0, 0, 0); opacity: 0.3; z-index: 9999;display:none;"></div>
+<div class="alert-box">
+    <div class="alert-wrap">
+        <a href="javascript:;" class="close-btn">x</a>
+        <div class="alert-con">
+            <div class="tab-bar">
+                <a href="javascript:;" class="select" id="num-logo-btn">账号登陆</a>
+                <a href="javascript:;" id="safe-logo-btn">安全登录</a>
+            </div>
+            <div class="logoin-box" id="logo-box">
+                <div class="input-wrap username">
+                    <span class="people-logo "></span>
+                    <input type="text" placeholder="邮箱/会员账号/手机号" id="userbox">
+                </div>
+                <div class="input-wrap password">
+                    <span class="pwd-logo"></span>
+                    <input type="password" id="password">
+                    <span class="placeholder">请输入密码</span>
+                </div>
+                <div class="auto-logo">
+                    <input type="checkbox" id="login_form_savestate">
+                    <label for="login_form_savestate">下次自动登录</label>
+                    <span class="forget-pwd">
+                        <a href="#">忘记密码</a>
+                    </span>
+                </div>
+                <div class="btn">
+                    <a href="javascript:void(0)">登录</a>
+                </div>
+                <div class="login-qq">
+                    <a href="#">
+                        <i class="qq-logo"></i>
+                        <em>使用qq直接登陆</em>
+                    </a>
+                </div>
+                <div class="log-ret">
+                    <a href="#">立即注册</a>
+                    <a href="#">短信登录</a>
+                </div>
+            </div>
+            <div class="qrcode-box" id="qrcode-box">
+                <div class="qrcode-con">
+                    <img src="./image/ewm.png" alt="">
+                    <div class="note-text">请打开微博客户端“扫一扫”</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="phoneNum-tip" id="DL-tips-box">
+    <div class="content">
+        <p>
+            <span id="tip-con">请输入登录名</span>
+            <a href="javascript:;" class="close-btn">x</a>
+        </p>
+        <div class="bottom-arrow-box">
+            <span class="bottom-arrow">
+                <i></i>
+            </span>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="js/index.js"></script>
+
+
+<body>
+
+</body>
+
+</html>
