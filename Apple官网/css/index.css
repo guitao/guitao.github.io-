@@ -1,0 +1,643 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "SF Pro SC", "SF Pro Text", "SF Pro Icons", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+.adv-wrapper {
+    position: relative;
+    background-color: #444;
+    height: 40px;
+    line-height: 1;
+    width: 100%;
+    right: 0;
+    z-index: 9999;
+}
+
+.adv-wrapper .adv-text {
+    color: #a8a8aa;
+    font-size: 12px;
+    line-height: 40px;
+    overflow: hidden;
+    max-width: 976px;
+    margin: 0 auto;
+    text-align: right;
+}
+
+.global-nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    min-width: 1024px;
+    height: 44px;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 17px;
+}
+
+.global-nav .gn-content {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 22px;
+    position: relative;
+    z-index: 2;
+    font-size: 14px;
+}
+
+.global-nav .gn-content .gn-list {
+    height: 44px;
+    width: auto;
+    cursor: default;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -10px;
+    user-select: none;
+}
+
+.global-nav .gn-content .gn-list .gn-item {
+    height: 44px;
+    vertical-align: top;
+}
+
+#global-nav .gn-link {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 3.14286;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    padding: 0 10px;
+    height: 44px;
+    opacity: 1;
+    background-repeat: no-repeat;
+    white-space: nowrap;
+    transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+#global-nav .gn-link:hover {
+    opacity: .65;
+}
+
+#global-nav .gn-link-apple {
+    background-image: url(../image/apple.svg);
+    background-repeat: no-repeat;
+    background-size: 20px 44px;
+    background-position: center center;
+    width: 20px;
+}
+
+#global-nav .gn-link-search {
+    background: url(../image/search.svg) no-repeat;
+    background-size: 16px 44px;
+    background-position: center center;
+    width: 16px;
+}
+
+#global-nav .gn-link-bag {
+    background: url(../image/bag.svg) no-repeat;
+    background-size: 14px 45px;
+    background-position: center center;
+    width: 14px;
+}
+
+.main {
+    position: relative;
+    max-width: 2560px;
+    margin: 0 auto;
+}
+
+.homepage-selection {
+    transform: translate3d(0, 0, 0);
+}
+
+#homepage-section .section-list {
+    width: 100%;
+}
+
+#homepage-section .homepage-section-item {
+    display: block;
+    width: 100%;
+    background-color: #fafafa;
+    border-bottom: 12px solid #fff;
+    position: relative;
+}
+
+#homepage-section .homepage-section-item:nth-of-type(2) {
+    background-color: #f5f5f5;
+}
+
+#homepage-section .section-item-wrap {
+    position: relative;
+    height: 580px;
+    display: flex;
+    flex-direction: column;
+}
+
+#homepage-section .item-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+#homepage-section .item-link .link-txt {
+    display: block;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    text-decoration: underline;
+}
+
+#homepage-section .item-title-wrap {
+    position: relative;
+    padding-top: 88px;
+    text-align: center;
+}
+
+#homepage-section .item-title-wrap h2 {
+    text-align: center;
+    width: 100%;
+    font-size: 56px;
+    line-height: 1.07143;
+    font-weight: 600;
+    letter-spacing: -.005em;
+}
+
+#homepage-section .item-title-wrap h3 {
+    text-align: center;
+    width: 100%;
+    position: relative;
+    margin-top: 8px;
+    font-size: 27px;
+    line-height: 1.14815;
+    font-weight: 400;
+    letter-spacing: .008em;
+    padding-left: 0.4em;
+}
+
+#homepage-section .item-image-wrap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#homepage-section .item-image-wrap .item-image {
+    position: absolute;
+    z-index: 1;
+    right: auto;
+    left: calc(50% + 0px);
+    transform: translateX(-50%);
+    top: 274px;
+    z-index: 1;
+}
+
+#homepage-section .item-image-wrap .item-image-iPhoneX {
+    background: url(../image/iphone_x.jpg) no-repeat;
+    background-size: 909px 194px;
+    width: 909px;
+    height: 194px;
+}
+
+#homepage-section .item-title-wrap-iPad {
+    padding-top: 38px;
+}
+
+#homepage-section .item-image-wrap .item-image-iPad {
+    background: url(../image/ipad.jpg) no-repeat;
+    width: 1068px;
+    height: 396px;
+    background-size: 1068px 396px;
+    top: 184px;
+}
+
+#homepage-section .item-football .item-title-wrap {
+    padding-top: 47px;
+}
+
+#homepage-section .item-football .item-title-wrap h2,
+#homepage-section .item-football .item-title-wrap h3 {
+    color: #fff;
+    z-index: 999;
+    position: relative;
+}
+
+#homepage-section .item-football .item-image-wrap .item-image-shoot {
+    background: url(../image/shoot.jpg) no-repeat;
+    width: 2560px;
+    height: 590px;
+    background-size: 2560px 590px;
+    position: absolute;
+    top: 0;
+}
+
+
+/* homepage-section-2 */
+
+#homepage-section-2 .section2-list {
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    margin-top:
+}
+
+#homepage-section-2 .section2-list .section-2-item {
+    width: 50%;
+    box-sizing: border-box;
+    border: 6px solid rgba(255, 255, 255);
+    background-color: rgb(250, 250, 250);
+    margin-top: 6px;
+}
+
+#homepage-section-2 .section2-list .section-2-item .product-red {
+    background-color: rgb(176, 14, 35);
+}
+
+#homepage-section-2 .section2-list .section-2-item .unit-wrap {
+    position: relative;
+    display: flex;
+    box-orient: vertical;
+    flex-direction: column;
+    overflow: hidden;
+    height: 580px;
+}
+
+#homepage-section-2 .unit-wrap .iphone8-tab-wrap {
+    position: relative;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 99;
+}
+
+#homepage-section-2 .unit-wrap .iphone8-tab-wrap .label-special {
+    color: #fff;
+    width: auto;
+    margin-top: 58px;
+    font-size: 12px;
+    line-height: 1.33341;
+    font-weight: 400;
+    padding: 2px 10px;
+    border-radius: 3px;
+    border: 1px solid #fff;
+    overflow: hidden;
+    display: inline-block;
+}
+
+#homepage-section-2 .unit-wrap h4 {
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: 0em;
+    max-width: 430px;
+    margin-top: 12px;
+    color: #fff;
+    text-align: center;
+}
+
+#homepage-section-2 .unit-wrap .iphone8-tab-wrap h4 span {
+    display: block;
+    padding-left: 4px;
+}
+
+#homepage-section-2 .unit-wrap .iphone8-tab-wrap .links {
+    margin: 8px auto;
+    width: 88%;
+    max-width: 430px;
+}
+
+#homepage-section-2 .unit-wrap .iphone8-tab-wrap .links a {
+    color: #fff;
+    cursor: pointer;
+}
+
+#homepage-section-2 .unit-wrap .iphone8-tab-wrap .links a:hover {
+    text-decoration: underline;
+}
+
+#homepage-section-2 .unit-wrap .iphone8-tab-wrap .links a:nth-of-type(2) {
+    margin-left: 18px;
+}
+
+#homepage-section-2 .unit-wrap .unit-image-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#homepage-section-2 .unit-wrap .unit-image-wrap .unit-image {
+    position: absolute;
+    z-index: 1;
+    right: auto;
+    left: calc(50% + 0px);
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+#homepage-section-2 .unit-wrap .unit-image-wrap .red-iphone {
+    background: url(../image/product_red.jpg) no-repeat;
+    width: 342px;
+    height: 365px;
+    background-size: 342px 365px;
+    top: 274px;
+}
+
+#homepage-section-2 .unit-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+#homepage-section-2 .unit-link span {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(0px 0px 99.9% 99.9%);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+}
+
+#homepage-section-2 .tab-wrap {
+    position: relative;
+    flex-grow: 0;
+    z-index: 99;
+}
+
+#homepage-section-2 .tab-wrap h4 {
+    margin: 52px auto;
+    margin-bottom: 0;
+    color: #000;
+    width: 88%;
+    max-width: 430px;
+}
+
+#homepage-section-2 h5 {
+    text-align: center;
+    width: 100%;
+    margin: 4px auto;
+    flex-shrink: 1;
+    font-size: 21px;
+    line-height: 1.2381;
+    font-weight: 400;
+    letter-spacing: .061em;
+}
+
+#homepage-section-2 .unit-image-ios {
+    background: url(../image/ios_large_2x.jpg) no-repeat;
+    width: 1262px;
+    height: 580px;
+    background-size: 1262px 580px;
+    top: 0;
+}
+
+#homepage-section-2 .theme-dark {
+    background-color: #000;
+    cursor: pointer;
+}
+
+#homepage-section-2 .theme-dark #mac-h4 {
+    color: #fff;
+    font-size: 40px;
+}
+
+#homepage-section-2 .theme-dark #mac-h5 {
+    color: #fff;
+    font-size: 21px;
+}
+
+#homepage-section-2 .unit-image-mac {
+    background: url(../image/macos_large_2x.jpg) no-repeat;
+    width: 1262px;
+    height: 581px;
+    background-size: 1262px 581px;
+}
+
+#homepage-section-2 .unit-image-watch {
+    background: url(../image/watchos_large_2x.jpg) no-repeat;
+    width: 764px;
+    height: 375px;
+    background-size: 764px 375px;
+    top: 205px;
+}
+
+#homepage-section-2 #music-h4 {
+    background: url(../image/music-logo_2x.png) no-repeat;
+    height: 33px;
+    background-size: 129px 33px;
+    background-position: center;
+}
+
+#homepage-section-2 #music-h5 {
+    margin-top: 10px;
+}
+
+#homepage-section-2 .unit-image-music {
+    background: url(../image/music_three_months_large_2x.jpg) no-repeat;
+    width: 1262px;
+    height: 580px;
+    background-size: 1262px 580px;
+    top: 0;
+}
+
+#homepage-section-2 #wwdc-h4 {
+    background: url(../image/wwdc_large_2x.png) no-repeat;
+    height: 30px;
+    background-size: 155px 30px;
+    background-position: center;
+}
+
+#homepage-section-2 #wwdc-h5 {
+    margin-top: 10px;
+}
+
+#homepage-section-2 .unit-image-wwdc {
+    background: url(../image/wwdc_large_2x.jpg) no-repeat;
+    width: 1262px;
+    height: 580px;
+    background-size: 1262px 580px;
+    top: 0;
+}
+
+
+/* footer */
+
+#global-footer {
+    font-size: 11px;
+    line-height: 1.36364;
+    font-weight: 400;
+    background-color: #f2f2f2;
+    color: #333;
+    min-width: 1024px;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    cursor: default;
+}
+
+#global-footer .gf-con {
+    margin: 0 auto;
+    max-width: 980px;
+    padding: 0 22px;
+}
+
+#global-footer .gf-con #gf-label {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+}
+
+#global-footer .gf-con .gf-nav {
+    padding-top: 40px;
+    letter-spacing: 0em;
+    display: flex;
+}
+
+#global-footer .gf-con .gf-nav .gf-nav-column {
+    width: 20%;
+}
+
+#global-footer .gf-con #gf-nav .gf-nav-column h3 {
+    font-size: 11px;
+    line-height: 1.36364;
+    font-weight: 600;
+    margin-bottom: .8em;
+}
+
+#global-footer .gf-con #gf-nav .gf-nav-column ul {
+    margin-right: 20px;
+}
+
+#global-footer .gf-con #gf-nav .gf-nav-column ul li {
+    margin-bottom: .8em;
+}
+
+#global-footer .gf-con #gf-nav .gf-nav-column ul li a {
+    color: #555;
+}
+
+#global-footer .gf-con #gf-nav .gf-nav-column ul li a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+#global-footer #gf-footer {
+    padding: 34px 0 21px;
+    color: #888;
+}
+
+#global-footer #gf-footer .gf-footer-shop {
+    margin-bottom: 7px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #d6d6d6;
+}
+
+#global-footer #gf-footer .gf-footer-shop .nowrap a {
+    color: #0070c9;
+}
+
+#global-footer #gf-footer .gf-footer-shop .nowrap a:hover {
+    text-decoration: underline;
+}
+
+#global-footer #gf-footer .gf-footer-china {
+    float: right;
+    margin-top: 5px;
+    position: relative;
+    top: -3px;
+    z-index: 2;
+}
+
+#global-footer #gf-footer .gf-footer-china .chian-logo-link {
+    margin-left: 0;
+    padding-left: 0;
+    color: #555;
+}
+
+#global-footer #gf-footer .gf-footer-china .chian-logo-link .china-logo {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: -1px;
+    background: url(../image/china.png) no-repeat;
+    background-position: left center;
+    background-size: 16px 16px;
+    vertical-align: bottom;
+}
+
+#global-footer #gf-footer .gf-footer-legal {
+    position: relative;
+    top: -3px;
+    z-index: 1;
+    padding-top: 5px;
+}
+
+#global-footer #gf-footer .gf-footer-legal .gf-footer-legal-copyright {
+    margin-right: 30px;
+    float: left;
+    margin-top: 5px;
+}
+
+#global-footer #gf-footer .gf-footer-legal .gf-footer-legal-links {
+    position: relative;
+    z-index: 1;
+    margin-right: 30px;
+    float: left;
+    margin-top: 5px;
+}
+
+#global-footer #gf-footer .gf-footer-legal .gf-footer-legal-links a {
+    color: #555;
+    margin-right: 7px;
+    padding-right: 10px;
+    border-right: 1px solid #d6d6d6;
+    display: inline-block;
+}
+
+#global-footer #gf-footer .gf-footer-legal .gf-footer-legal-links a:hover {
+    text-decoration: underline;
+    color: #333;
+}
+
+#global-footer #gf-footer .gf-footer-legal .gf-footer-legal-links a:nth-of-type(5) {
+    border: none;
+}
+
+#global-footer #gf-footer .gf-footer-legal:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+#global-footer #gf-footer p {
+    margin-top: 10px;
+    color: #999;
+}
+
+#global-footer #gf-footer p a {
+    color: #999;
+}
+
+#global-footer #gf-footer p a:hover {
+    text-decoration: underline;
+}
