@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Web</title>
+    <title>Bootstarp -- demo</title>
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <style>
         .img-box {
@@ -18,7 +18,7 @@
 
 <body>
     <div class="container">
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
             <a href="#" class="navbar-brand">www.97guitao.cn</a>
             <button class="navbar-toggler" data-toggle="collapse" data-target='#collapsiableNavbar'>
                 <span class="navbar-toggler-icon"></span>
@@ -53,7 +53,7 @@
                     <p>关于我的一些介绍......</p>
                     <h2>个人项目:</h2>
                     <p>列表</p>
-                    <ul class="nav nav-pills flex-column">
+                    <ul class="nav nav-pills flex-column" id="nav">
                         <li class="nav-item">
                             <a href="http://www.97guitao.cn/dashboard/" class="nav-link">仪表盘</a>
                         </li>
@@ -104,7 +104,17 @@
     <script src="https://cdn.bootcss.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
     <script>
+        $(document).ready(function() {
+            $('#nav .nav-link').mouseenter(function() {
+                $(this).addClass('active');
+                // console.log(this);
+            });
+            $('#nav .nav-link').mouseleave(function() {
+                $(this).removeClass('active');
+                // console.log(this);
+            })
 
+        })
     </script>
 </body>
 
