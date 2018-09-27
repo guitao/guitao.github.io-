@@ -5,20 +5,157 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Web</title>
+    <title>Bootstarp -- demo</title>
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <style>
         .img-box {
             height: 200px;
             /* background-color: #ccc; */
         }
+        
+        #canvas {
+            position: fixed;
+            top: 0;
+            z-index: -100;
+        }
     </style>
 
 </head>
 
 <body>
+    <canvas id="canvas">如果你能看到这段文字，说明的的浏览器你支持Canvas</canvas>
+    <script>
+        var canvas = document.querySelector("#canvas");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        var ctx = canvas.getContext("2d");
+
+        // ctx.strokeStyle = "#777";
+        // ctx.arc(100,100,50,Math.PI/180*0,Math.PI/180*360,false);
+        // ctx.stroke();
+
+        // for (var i = 0; i < 100; i++) {
+        // 	ctx.strokeStyle = "#777";
+        // 	ctx.arc(x,y,50,Math.PI/180*0,Math.PI/180*360,false);
+        // 	ctx.stroke();
+        // 	x += 1;
+        // 	y += 1;
+        // }
+        var mouse = {
+            x: undefined,
+            y: undefined
+        };
+        window.addEventListener("mousemove", function(event) {
+            mouse.x = event.x;
+            mouse.y = event.y;
+            // console.log(mouse);
+        });
+        window.addEventListener("resize", function() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            init();
+        });
+        var maxRadius = 40;
+        // var minRadius = 2;
+        var colorArray = [
+            '#58D68D',
+            '#E67F22',
+            '#3598DB',
+            '#E84C3D',
+            '#9A59B5',
+            '#27AE61',
+            '#D25400',
+            '#BEC3C7',
+            '#297FB8'
+        ]
+
+        function Circle(x, y, dx, dy, radius) {
+            this.x = x;
+            this.y = y;
+            this.dx = dx;
+            this.dy = dy;
+            this.radius = radius;
+            this.minRadius = radius;
+            this.bg = colorArray[Math.floor(Math.random() * colorArray.length)];
+
+            this.draw = function() {
+                ctx.beginPath();
+                ctx.strokeStyle = "#777";
+                // var color = Math.floor(Math.random()*100000);
+                // ctx.fillStyle = "#"+color;
+                // ctx.fillStyle = "#777";
+                ctx.fillStyle = this.bg;
+                ctx.arc(this.x, this.y, this.radius, Math.PI / 180 * 0, Math.PI / 180 * 360, false);
+                // ctx.stroke();
+                ctx.fill();
+            }
+            this.update = function() {
+
+                if (this.x + this.radius > innerWidth || this.x - this.radius < 0) {
+                    this.dx = -this.dx;
+                }
+                if (this.y + this.radius > innerHeight || this.y - this.radius < 0) {
+                    this.dy = -this.dy;
+                }
+                this.x += this.dx;
+                this.y += this.dy;
+
+                if (mouse.x - this.x < 50 && mouse.x - this.x > -50 && mouse.y - this.y < 50 && mouse.y - this.y > -50) {
+                    if (this.radius < maxRadius) {
+                        this.radius += 1;
+                    }
+                } else if (this.radius > this.minRadius) {
+                    this.radius -= 1;
+                }
+
+                this.draw();
+
+            }
+        }
+        // var c = new Circle(x, y, dx, dy, radius);
+
+        var circleArray = [];
+
+        function init() {
+            circleArray = []
+            for (var i = 0; i < 300; i++) {
+                var x = Math.random() * window.innerWidth;
+                var y = Math.random() * window.innerHeight;
+                var dx = (Math.random() - 0.5);
+                var dy = (Math.random() - 0.5);
+                var radius = Math.random() * 3 + 1;
+                circleArray.push(new Circle(x, y, dx, dy, radius));
+            }
+        }
+        init();
+
+        function animate() {
+            ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+            requestAnimationFrame(animate);
+
+            for (var i = 0; i < circleArray.length; i++) {
+                circleArray[i].update();
+            }
+            // c.update();
+            // ctx.beginPath();
+            // ctx.strokeStyle = "#777";
+            // ctx.arc(x,y,radius,Math.PI/180*0,Math.PI/180*360,false);
+            // ctx.stroke();
+            // if (x + radius > innerWidth || x - radius < 0 ) {
+            // 	dx = -dx;
+            // }
+            // if (y + radius > innerHeight || y - radius < 0 ) {
+            // 	dy = -dy;
+            // }
+            // x += dx;
+            // y += dy;
+        }
+        animate();
+    </script>
     <div class="container">
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
             <a href="#" class="navbar-brand">www.97guitao.cn</a>
             <button class="navbar-toggler" data-toggle="collapse" data-target='#collapsiableNavbar'>
                 <span class="navbar-toggler-icon"></span>
@@ -37,7 +174,7 @@
                 </ul>
                 <form class="form-inline my-2 my-md-0 ml-auto">
                     <input type="text" class="form-control mr-2" placeholder="Search">
-                    <input type="Button" class="btn btn-primary" value="Search">
+                    <input type="Button" class="btn btn-primary" value="Sign in">
                 </form>
             </div>
         </nav>
@@ -58,19 +195,13 @@
                             <a href="http://www.97guitao.cn/dashboard/" class="nav-link">仪表盘</a>
                         </li>
                         <li class="nav-item">
-                            <a href="http://www.97guitao.cn/react-prime/" class="nav-link">react-prime</a>
-                        </li>
-                        <li class="nav-item">
                             <a href="http://www.97guitao.cn/%E5%9C%A8%E7%BA%BF%E7%BF%BB%E8%AF%91/" class="nav-link">在线翻译</a>
                         </li>
                         <li class="nav-item">
-                            <a href="http://www.97guitao.cn/app-skipt(vue)/" class="nav-link">app-skipt(vue)</a>
+                            <a href="http://www.97guitao.cn/vuetest/" class="nav-link">VueTest</a>
                         </li>
                         <li class="nav-item">
                             <a href="http://www.97guitao.cn/taobao/" class="nav-link">淘宝实例(移动端布局不适)</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="http://www.97guitao.cn/Apple官网/" class="nav-link">Apple官网首页(移动端布局不适)</a>
                         </li>
                         <li class="nav-item">
                             <a href="http://www.97guitao.cn/新浪微博/" class="nav-link">新浪微博实例(移动端布局不适)</a>
