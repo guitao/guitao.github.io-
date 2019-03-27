@@ -17,7 +17,7 @@
 
     window.onscroll = function() {
         let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-        console.log(scrollTop)
+        // console.log(scrollTop)
         const navBox = document.getElementById('nav-box');
         if (scrollTop >= 620) {
             navBox.style.position = 'fixed';
