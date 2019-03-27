@@ -7,6 +7,9 @@
         e.preventDefault();
         navList.style.display = navList.style.display == 'none' ? 'block' : 'none';
     }, true);
+    navList.addEventListener('click', function() {
+        this.style.display = 'none'
+    }, true)
 
     // 大屏幕下右侧导航的滚动监听
 
