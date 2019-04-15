@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>按钮文字滑动特效</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fceccf;
+        }
+        
+        .wrap {
+            width: 200px;
+            height: 60px;
+            border: 2px solid black;
+            text-align: center;
+            font-size: 30px;
+            line-height: 60px;
+            font-family: sans-serif;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        span {
+            display: inline-block;
+            color: blue;
+            transition: 0.5s;
+        }
+        
+        span:nth-child(odd) {
+            transform: translateY(-100%);
+        }
+        
+        span:nth-child(even) {
+            transform: translateY(100%)
+        }
+        
+        span::before {
+            content: attr(data-text);
+            position: absolute;
+            color: red;
+        }
+        
+        span:nth-child(odd)::before {
+            transform: translateY(100%)
+        }
+        
+        span:nth-child(even)::before {
+            transform: translateY(-100%)
+        }
+        
+        .wrap:hover span {
+            transform: translateY(0)
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <span data-text='B'>B</span>
+        <span data-text='U'>U</span>
+        <span data-text='T'>T</span>
+        <span data-text='T'>T</span>
+        <span data-text='O'>O</span>
+        <span data-text='N'>N</span>
+    </div>
+</body>
+
+</html>
