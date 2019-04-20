@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3D文字跑马灯</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #59bab7;
+        }
+        
+        .text-wrap {
+            display: flex;
+        }
+        
+        .text-wrap .inner {
+            width: 200px;
+            height: 100px;
+            line-height: 100px;
+            font-size: 32px;
+            font-family: sans-serif;
+            font-weight: bold;
+            white-space: nowrap;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .text-wrap .inner:first-child {
+            background-color: #999;
+            opacity: .8;
+            color: antiquewhite;
+            transform-origin: left;
+            transform: perspective(300px) rotateY(-67.3deg);
+        }
+        
+        .text-wrap .inner:last-child {
+            background-color: #999;
+            opacity: .6;
+            color: #fff;
+            transform-origin: right;
+            transform: perspective(300px) rotateY(67.3deg);
+        }
+        
+        @keyframes marquee {
+            from {
+                left: 100%;
+            }
+            to {
+                left: -100%;
+            }
+        }
+        
+        .text-wrap .inner span {
+            position: absolute;
+            animation: marquee 5s linear infinite;
+        }
+        
+        .text-wrap .inner:first-child span {
+            animation-delay: 2.5s;
+            left: -100%;
+        }
+
+
+        
+
+.text-wrap {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.text-wrap .inner {
+    width: 200px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 32px;
+    font-family: sans-serif;
+    font-weight: bold;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+}
+
+.text-wrap .inner:first-child {
+    background-color: #999;
+    opacity: .8;
+    color: antiquewhite;
+    transform-origin: left;
+    transform: perspective(300px) rotateY(-67.3deg);
+}
+
+.text-wrap .inner:last-child {
+    background-color: #999;
+    opacity: .6;
+    color: #fff;
+    transform-origin: right;
+    transform: perspective(300px) rotateY(67.3deg);
+}
+
+@keyframes marquee {
+    from {
+        left: 100%;
+    }
+    to {
+        left: -100%;
+    }
+}
+
+.text-wrap .inner span {
+    position: absolute;
+    animation: marquee 5s linear infinite;
+}
+
+.text-wrap .inner:first-child span {
+    animation-delay: 2.5s;
+    left: -100%;
+}
+    </style>
+</head>
+
+<body>
+    <div class="text-wrap">
+        <div class="inner">
+            <span>个人简历</span>
+        </div>
+        <div class="inner">
+            <span>个人简历</span>
+        </div>
+    </div>
+</body>
+
+</html>
