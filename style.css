@@ -7,12 +7,19 @@
     font-family: 'Open Sans', sans-serif !important;
 }
 
+html,
+body {
+    scroll-behavior: smooth;
+}
+
 .wrapper {
     position: relative;
+    /* scroll-behavior: smooth;
+    overflow: hidden; */
 }
 
 section {
-    transition: all .3s linear;
+    /* transition: all .3s linear; */
 }
 
 #home {

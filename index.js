@@ -13,11 +13,11 @@
 
     // 大屏幕下右侧导航的滚动监听
 
-
-
     window.onscroll = function() {
         let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
         // console.log(scrollTop)
+
+        // 右边导航栏定位的切换
         const navBox = document.getElementById('nav-box');
         if (scrollTop >= 620) {
             navBox.style.position = 'fixed';
@@ -44,12 +44,23 @@
         }
 
 
-        let target;
-        if (scrollTop <= 1099) {
+        const bascInfo = document.getElementById('basic-info'),
+            skill = document.getElementById('skill'),
+            project = document.getElementById('project');
+        // console.log(scrollTop)
+
+        // 基本信息区域
+        const basicInfoArea = bascInfo.offsetTop + bascInfo.offsetHeight - 200;
+        // 个人能力区域
+        const skillArea = skill.offsetTop + skill.offsetHeight - 200;
+        // 个人项目区域
+        const projectArea = project.offsetTop + project.offsetHeight - 300;
+
+        if (scrollTop <= basicInfoArea) {
             setActiveDom('basc-info')
-        } else if (scrollTop > 1099 && scrollTop <= 1900) {
+        } else if (scrollTop > basicInfoArea && scrollTop <= skillArea) {
             setActiveDom('skill');
-        } else if (scrollTop > 1900 && scrollTop <= 2500) {
+        } else if (scrollTop > skillArea && scrollTop <= projectArea) {
             setActiveDom('project')
         } else {
             setActiveDom('contact');
