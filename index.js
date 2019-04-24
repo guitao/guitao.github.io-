@@ -1,4 +1,12 @@
 (function() {
+
+    // 一进来的加载效果
+    const loading = document.getElementById('loading');
+    const timer = setTimeout(function() {
+        loading.style.visibility = 'hidden'
+        clearTimeout(timer)
+    }, 2000)
+
     // 小屏幕下的导航栏折叠效果
     const toggleBtn = document.getElementById('toggle-btn'),
         navList = document.getElementById('nav-list');
