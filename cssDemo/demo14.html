@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>侧立图书效果</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to top left, white, dimgray);
+        }
+        
+        .book {
+            width: 12rem;
+            height: 18rem;
+            background: linear-gradient(navy, deeppink, tomato);
+            transform: skewY(-10deg);
+            position: relative;
+            transition: .3s;
+        }
+        
+        .book:hover {
+            margin-top: -1.5em;
+        }
+        /* 书的侧面 */
+        
+        .book:before {
+            content: '';
+            display: block;
+            width: 1.5em;
+            height: 100%;
+            background: linear-gradient(navy, deeppink, tomato);
+            position: absolute;
+            top: 0;
+            left: -1.5em;
+            transform-origin: right;
+            transform: skewY(45deg);
+            filter: brightness(0.6);
+        }
+        /* 顶部 */
+        
+        .book:after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1.5em;
+            background-color: #fff;
+            position: absolute;
+            left: 0;
+            top: -1.5em;
+            transform-origin: bottom;
+            transform: skewX(45deg);
+            filter: brightness(0.9);
+        }
+        /* 中间字体样式 */
+        
+        .book span {
+            /* display: block; */
+            width: 100%;
+            height: 50%;
+            color: whitesmoke;
+            font-size: 2.2rem;
+            font-family: sans-serif;
+            background: silver;
+            text-align: center;
+            margin-top: 35%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        
+        .book span:before {
+            content: '';
+            display: block;
+            width: .7em;
+            height: 100%;
+            background: silver;
+            transform-origin: right;
+            transform: skewY(45deg);
+            position: absolute;
+            top: 0;
+            left: -0.7em;
+        }
+        
+        .book span:after {
+            content: attr(data-text);
+            font-size: 16px;
+            color: #fff;
+            position: absolute;
+            bottom: 1.5em;
+        }
+        /* 三本书布局 */
+        
+        .books {
+            display: flex;
+            width: calc(12rem * 3 + 3rem * 2);
+            justify-content: space-between;
+            margin-top: 6rem;
+            position: relative;
+        }
+        
+        .css {
+            top: -3em;
+        }
+        
+        .js {
+            top: -6em;
+        }
+        
+        .book.html span,
+        .book.html span:before {
+            background-color: orange;
+        }
+        
+        .book.css span,
+        .book.css span:before {
+            background-color: yellowgreen;
+        }
+        
+        .book.js span,
+        .book.js span:before {
+            background-color: royalblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="books">
+        <div class="book html">
+            <span data-text="<devlopment />">HTML</span>
+        </div>
+        <div class="book css">
+            <span data-text=".devlopment">CSS</span>
+        </div>
+        <div class="book js">
+            <span data-text="{devlopment}">JavaScript</span>
+        </div>
+    </div>
+</body>
+
+</html>
