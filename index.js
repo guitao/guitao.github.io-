@@ -5,7 +5,7 @@
     const timer = setTimeout(function() {
         loading.style.visibility = 'hidden'
         clearTimeout(timer)
-    }, 2000)
+    }, 4000)
 
     // 小屏幕下的导航栏折叠效果
     const toggleBtn = document.getElementById('toggle-btn'),
