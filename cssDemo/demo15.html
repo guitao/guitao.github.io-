@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css制作条状图</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(dimgray, silver, silver, dimgray);
+        }
+        
+        .wrap {
+            width: 400px;
+            background: linear-gradient(#333, dimgray);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            box-sizing: border-box;
+            padding: 20px;
+            padding-bottom: 30px;
+            font-family: sans-serif;
+            color: white;
+            letter-spacing: 0.1em;
+            border-radius: 4px;
+        }
+        
+        .wrap h3 {
+            text-align: center;
+        }
+        
+        .wrap .skill {
+            width: 100%;
+        }
+        
+        .wrap .skill .text {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4px;
+        }
+        
+        .wrap .skill .bar-box {
+            width: 100%;
+            height: 15px;
+            border-radius: 4px;
+            border: 1px solid #00fa9a;
+        }
+        
+        .wrap .skill .bar-box .bar {
+            height: 15px;
+            background-color: #00fa9a;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .wrap .skill.html .bar-box .bar {
+            width: 90%;
+        }
+        
+        .wrap .skill.css .bar-box .bar {
+            width: 60%;
+        }
+        
+        .wrap .skill.javaScript .bar-box .bar {
+            width: 30%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <h3>DEVELOPMENT SKILLS</h2>
+            <div class="skill html">
+                <p class="text">
+                    <span>html</span>
+                    <span>90%</span>
+                </p>
+                <div class="bar-box">
+                    <p class="bar"></p>
+                </div>
+            </div>
+            <div class="skill css">
+                <p class="text">
+                    <span>CSS</span>
+                    <span>60%</span>
+                </p>
+                <div class="bar-box">
+                    <p class="bar"></p>
+                </div>
+            </div>
+            <div class="skill javaScript">
+                <p class="text">
+                    <span>JavaScript</span>
+                    <span>30%</span>
+                </p>
+                <div class="bar-box">
+                    <p class="bar"></p>
+                </div>
+            </div>
+    </div>
+</body>
+
+</html>
