@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css彩色字体</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: black;
+        }
+        
+        .wrap {
+            color: white;
+            font-size: 300px;
+            text-transform: uppercase;
+            font-family: sans-serif;
+            font-weight: bold;
+            line-height: 1em;
+            position: relative;
+            color: transparent;
+        }
+        
+        .wrap span:after,
+        .wrap span:before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            animation: animate 0.8s infinite alternate;
+            filter: opacity(0);
+        }
+        
+        .wrap span:nth-child(1):before {
+            z-index: 1;
+            height: calc(100% - 10% * 1);
+            color: orchid;
+            animation-delay: calc(0.8s - 0.1s * 1);
+        }
+        
+        .wrap span:nth-child(1):after {
+            z-index: 2;
+            height: calc(100% - 10% * 2);
+            color: mediumpurple;
+            animation-delay: calc(0.8s - 0.1s * 2);
+        }
+        
+        .wrap span:nth-child(2):before {
+            z-index: 3;
+            height: calc(100% - 10% * 3);
+            color: deepskyblue;
+            animation-delay: calc(0.8s - 0.1s * 3);
+        }
+        
+        .wrap span:nth-child(2):after {
+            z-index: 4;
+            height: calc(100% - 10% * 4);
+            color: cyan;
+            animation-delay: calc(0.8s - 0.1s * 4);
+        }
+        
+        .wrap span:nth-child(3):before {
+            z-index: 5;
+            height: calc(100% - 10% * 5);
+            color: mediumspringgreen;
+            animation-delay: calc(0.8s - 0.1s * 5);
+        }
+        
+        .wrap span:nth-child(3):after {
+            z-index: 6;
+            height: calc(100% - 10% * 6);
+            color: yellow;
+            animation-delay: calc(0.8s - 0.1s * 6);
+        }
+        
+        .wrap span:nth-child(4):before {
+            color: gold;
+            z-index: 7;
+            height: calc(100% - 10% * 7);
+            animation-delay: calc(0.8s - 0.1s * 7)
+        }
+        
+        .wrap span:nth-child(4):after {
+            color: tomato;
+            z-index: 8;
+            height: calc(100% - 10% * 8);
+            animation-delay: calc(0.8s - 0.1s * 8);
+        }
+        
+        @keyframes animate {
+            from {
+                filter: opacity(0);
+            }
+            to {
+                filter: opacity(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        web
+        <span data-text='web'></span>
+        <span data-text='web'></span>
+        <span data-text='web'></span>
+        <span data-text='web'></span>
+    </div>
+</body>
+
+</html>
