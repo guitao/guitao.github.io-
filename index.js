@@ -62,7 +62,7 @@
         // 个人能力区域
         const skillArea = skill.offsetTop + skill.offsetHeight - 200;
         // 个人项目区域
-        const projectArea = project.offsetTop + project.offsetHeight - 300;
+        const projectArea = project.offsetTop + project.offsetHeight - 800;
 
         if (scrollTop <= basicInfoArea) {
             setActiveDom('basc-info')
