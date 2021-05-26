@@ -3,9 +3,9 @@
     // 一进来的加载效果
     const loading = document.getElementById('loading');
     const timer = setTimeout(function() {
-        loading.style.visibility = 'hidden'
-        clearTimeout(timer)
-    }, 4000)
+        loading.style.visibility = 'hidden';
+        clearTimeout(timer);
+    }, 4000);
 
     // 小屏幕下的导航栏折叠效果
     const toggleBtn = document.getElementById('toggle-btn'),
@@ -16,8 +16,8 @@
         navList.style.display = navList.style.display == 'none' ? 'block' : 'none';
     }, true);
     navList.addEventListener('click', function() {
-        this.style.display = 'none'
-    }, true)
+        this.style.display = 'none';
+    }, true);
 
     // 大屏幕下右侧导航的滚动监听
 
@@ -43,12 +43,12 @@
             // console.log(Array.isArray(navItemArr))
             navItemArr.forEach(item => {
                 item.classList.remove('active');
-            })
+            });
             navItemArr.forEach(item => {
                 if (item.getAttribute('data-name') == dataName) {
                     item.classList.add('active');
                 }
-            })
+            });
         }
 
 
@@ -65,15 +65,13 @@
         const projectArea = project.offsetTop + project.offsetHeight - 800;
 
         if (scrollTop <= basicInfoArea) {
-            setActiveDom('basc-info')
+            setActiveDom('basc-info');
         } else if (scrollTop > basicInfoArea && scrollTop <= skillArea) {
             setActiveDom('skill');
         } else if (scrollTop > skillArea && scrollTop <= projectArea) {
-            setActiveDom('project')
+            setActiveDom('project');
         } else {
             setActiveDom('contact');
         }
-
-
     }
 }())
