@@ -6,8 +6,10 @@
     color: #434242;
     font-family: 'Open Sans', sans-serif !important;
 }
+
 ::-webkit-scrollbar {
-    display: none; /* Chrome Safari */
+    display: none;
+    /* Chrome Safari */
 }
 
 html,
@@ -17,12 +19,35 @@ body {
 
 .wrapper {
     position: relative;
-    /* scroll-behavior: smooth;
-    overflow: hidden; */
 }
 
-section {
-    /* transition: all .3s linear; */
+/* 会动的眼睛 */
+
+.eye-box {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+.eye {
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    background: #CCC;
+}
+
+.eye:after {
+    /*pupil*/
+    position: absolute;
+    bottom: 17px;
+    right: 10px;
+    width: 10px;
+    height: 10px;
+    background: #000;
+    border-radius: 50%;
+    content: " ";
 }
 
 #home {
@@ -77,9 +102,11 @@ section {
     0% {
         padding-top: 20px;
     }
+
     50% {
         padding-top: 28px;
     }
+
     100% {
         padding-top: 20px;
     }
@@ -153,6 +180,7 @@ section .content .content-item {
     justify-content: center;
     align-items: center;
 }
+
 section .content .content-item-left {
     padding-left: 30px;
     padding-right: 30px;
@@ -237,6 +265,11 @@ section .content .detail-info-box p {
 
 #skill .skill-box .skill-list .skill-item img {
     transition: margin .2s;
+}
+
+#skill .skill-box .skill-list .skill-item .highlight-name {
+    color: #f40;
+    font-weight: 600;
 }
 
 #skill .skill-box .skill-list .skill-item:hover img {
@@ -346,6 +379,7 @@ section .content .detail-info-box p {
     from {
         width: 0%;
     }
+
     to {
         width: 100%;
     }
@@ -378,6 +412,7 @@ section .content .detail-info-box p {
     from {
         margin-left: 100%;
     }
+
     to {
         margin-left: 0;
     }
@@ -511,6 +546,7 @@ section .content .detail-info-box p {
     from {
         left: 100%;
     }
+
     to {
         left: -100%;
     }
@@ -530,6 +566,10 @@ section .content .detail-info-box p {
 /* 适应小屏幕(960px) */
 
 @media screen and (max-width: 960px) {
+    .eye-box {
+        display: none;
+    }
+
     /* 小屏幕隐藏走马灯标题 */
     #home .text-wrap .inner {
         /* display: none; */
@@ -538,6 +578,7 @@ section .content .detail-info-box p {
         height: 0;
         overflow: hidden;
     }
+
     #home .text-wrap .sm-title {
         /* display: none; */
         /* visibility: hidden; */
@@ -546,15 +587,18 @@ section .content .detail-info-box p {
         overflow: hidden;
         color: #fff;
     }
+
     section .container {
         padding: 6% 18%;
     }
+
     section .s-title {
         text-align: center;
         font-size: 38px;
         color: #22A39F;
         padding: 20px 0;
     }
+
     /* 基本信息 */
     section .content {
         display: grid;
@@ -562,14 +606,16 @@ section .content .detail-info-box p {
         padding-top: 30px;
         text-align: center;
     }
-   
+
     section .content .content-item .avatar img {
         width: 200px;
     }
+
     /* 个人能力 */
     #skill .container {
         padding: 0 18%;
     }
+
     #skill .skill-box .skill-list .skill-item {
         width: 100%;
     }
@@ -583,9 +629,14 @@ section .content .detail-info-box p {
 }
 
 @media screen and (max-width: 776px) {
+    .eye-box {
+        display: none;
+    }
+
     .wrapper .nav-box {
         display: none;
     }
+
     .wrapper .nav-box-sm {
         display: block;
         position: relative;
@@ -594,6 +645,7 @@ section .content .detail-info-box p {
         display: flex;
         justify-content: flex-end;
     }
+
     .wrapper .nav-box-sm .toggle-btn {
         width: 40px;
         height: 32px;
@@ -604,6 +656,7 @@ section .content .detail-info-box p {
         align-items: center;
         margin-right: 2%;
     }
+
     .wrapper .nav-box-sm .nav-list {
         position: absolute;
         width: 100%;
@@ -613,26 +666,32 @@ section .content .detail-info-box p {
         display: none;
         transition: all 1s linear;
     }
+
     .wrapper .nav-box-sm .nav-list .nav-item-sm {
         padding: 15px 0;
     }
+
     .wrapper .nav-box-sm .nav-list li.active {
         background-color: #22A39F;
     }
+
     .wrapper .nav-box-sm .nav-list .nav-item-sm .nav-link {
         color: #fff;
         font-weight: 600;
         font-size: 18px;
     }
+
     #home .arrow-bottom {
         width: 100%;
         left: 0;
         right: 0;
     }
+
     /* 个人项目 */
     #project .pro-list .pro-item {
         width: 100%;
     }
+
     /* 联系方式 */
     #contact .container .contact-list .contact-item {
         width: 100%;

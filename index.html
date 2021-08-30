@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>97-GuiTao</title>
+    <title>gtgt-vip</title>
 
     <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="stylesheet" href="./style.min.css">
+    <!-- <link rel="stylesheet" href="./style.min.css"> -->
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./loading.css">
     <script async>
         var _hmt = _hmt || [];
@@ -32,7 +33,13 @@
             </div>
         </div>
     </div>
-    <div class="wrapper">
+    <div class="wrapper move-area">
+        <!-- 会动的眼睛 -->
+        <div class='eye-box'>
+            <div class='eye'></div>
+            <div class='eye'></div>
+        </div>
+
         <nav class="nav-box" style="position:absolute;
         top: 100vh;
         right: 4%;" id='nav-box'>
@@ -97,7 +104,7 @@
                     <div class="content-item content-item-left col-4 col-s-12">
                         <h1 class="title">关于我</h1>
                         <p class="text">
-                            我是一个前端开发人员。爱好程序设计，追求技术上的满足感;稳固的架构，健壮的代码，团结的合作，是我的不懈追求。
+                            我是一个<b>前端开发</b>人员。爱好程序设计，追求技术上的满足感;稳固的架构，健壮的代码，团结的合作，是我的不懈追求。
                         </p>
                     </div>
                     <div class="content-item avatar-box col-4 col-s-12">
@@ -148,7 +155,7 @@
                             </div>
                         </div>
                         <div class="skill-item">
-                            <p class="name">JavaScript（ES6）</p>
+                            <p class="name">JavaScript</p>
                             <div class="star-box">
                                 <img src="./img/blue-star.png" alt="">
                                 <img src="./img/blue-star.png" alt="">
@@ -158,7 +165,7 @@
                             </div>
                         </div>
                         <div class="skill-item">
-                            <p class="name">Vue</p>
+                            <p class="name highlight-name">Vue全家桶</p>
                             <div class="star-box">
                                 <img src="./img/blue-star.png" alt="">
                                 <img src="./img/blue-star.png" alt="">
@@ -168,11 +175,21 @@
                             </div>
                         </div>
                         <div class="skill-item">
-                            <p class="name">TypeScript</p>
+                            <p class="name highlight-name">React/Redux/Hook</p>
                             <div class="star-box">
+                                <img src="./img/blue-star.png" alt="">
                                 <img src="./img/blue-star.png" alt="">
                                 <img src="./img/blue-star.png" alt="">
                                 <img src="./img/white-star.png" alt="">
+                                <img src="./img/white-star.png" alt="">
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <p class="name highlight-name">TypeScript</p>
+                            <div class="star-box">
+                                <img src="./img/blue-star.png" alt="">
+                                <img src="./img/blue-star.png" alt="">
+                                <img src="./img/blue-star.png" alt="">
                                 <img src="./img/white-star.png" alt="">
                                 <img src="./img/white-star.png" alt="">
                             </div>
@@ -205,16 +222,6 @@
                                 <img src="./img/blue-star.png" alt="">
                                 <img src="./img/blue-star.png" alt="">
                                 <img src="./img/blue-star.png" alt="">
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <p class="name">React</p>
-                            <div class="star-box">
-                                <img src="./img/blue-star.png" alt="">
-                                <img src="./img/blue-star.png" alt="">
-                                <img src="./img/blue-star.png" alt="">
-                                <img src="./img/white-star.png" alt="">
-                                <img src="./img/white-star.png" alt="">
                             </div>
                         </div>
 
@@ -258,7 +265,7 @@
                     <h3 class="title">工具</h3>
                     <div class="skill-list">
                         <div class="skill-item">
-                            <p class="name">Visual Studio Code</p>
+                            <p class="name highlight-name">Visual Studio Code</p>
                             <div class="star-box">
                                 <img src="./img/blue-star.png" alt="">
                                 <img src="./img/blue-star.png" alt="">
@@ -349,7 +356,7 @@
                             </div>
                         </div>
                         <div class="skill-item">
-                            <p class="name">Git</p>
+                            <p class="name highlight-name">Git</p>
                             <div class="star-box">
                                 <img src="./img/blue-star.png" alt="">
                                 <img src="./img/blue-star.png" alt="">
@@ -418,8 +425,7 @@
                                     </span>
                                 </p>
                             </figcaption>
-                            <a href="http://gtgt.vip/managementSkills/#/home" target="blank"
-                                class="link"></a>
+                            <a href="http://gtgt.vip/managementSkills/#/home" target="blank" class="link"></a>
                         </figure>
                     </div>
                     <!-- <div class="pro-item">
@@ -557,11 +563,11 @@
                         </div>
                     </div>
                 </div>
-                <a href='http://www.97guitao.cn/' class="copyright">www.97guitao.cn,@guitao</a>
+                <a href='http://gtgt.vip/' class="copyright">gtgt.vip,@guitao</a>
             </div>
         </section>
     </div>
-
+    <script src="./eye.js" ></script>
 </body>
 
 </html>
