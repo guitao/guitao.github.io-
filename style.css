@@ -155,6 +155,12 @@ body {
     align-items: center;
 }
 
+.canvas-wrap {
+    text-align: center;
+    width: 100vw;
+    height: 500px;
+    background-color: #fff;
+}
 
 /* 基本信息 */
 
@@ -577,6 +583,10 @@ section .content .detail-info-box p {
 /* 适应小屏幕(960px) */
 
 @media screen and (max-width: 960px) {
+    .canvas-wrap {
+        display: none;
+    }
+
     .eye-box {
         display: none;
     }
@@ -640,6 +650,10 @@ section .content .detail-info-box p {
 }
 
 @media screen and (max-width: 776px) {
+    .canvas-wrap {
+        display: none;
+    }
+
     .eye-box {
         display: none;
     }
